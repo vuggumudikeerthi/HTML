@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Selectors</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js
+"></script>
+<style>
+	body
+	{
+		font-size: 17px;
+		font-family: arial;
+		background: #f4f4f4;
+		line-height:1.5em;
+	}
+
+	header
+	{
+		background: #333;
+		color:#fff;
+		padding: 20px;
+		text-align: center;
+		border-bottom: 4px solid #fff;
+		margin-bottom: 10px; 
+	}
+	#container
+	{
+		width: 90%;
+		margin: auto;
+		padding:10px;
+	}
+
+</style>
+</head>
+<body>
+	<header>
+		<h1>JQuery Selectors</h1>
+	</header>
+	<div id="container">
+		<h1 id ="heading1">Heading one</h1>
+		<p id="para1">An Al-Corn truck traveling eastbound on a service road adjacent to Highway 14 in Claremont lost control Thursday morning after sliding into the ditch.  <span>The driver was transported </span>with minor injuries.  </p>
+
+
+			<h2 class ="heading2">Heading Two</h2>
+		<p class="para2">An Al-Corn truck traveling eastbound on a service road adjacent to Highway 14 in Claremont lost control Thursday morning after sliding into the ditch.  <span>The driver was transported </span>with minor injuries.  </p>
+
+
+			<ul id="list">
+				<li>list item</li>
+				<li>list item</li>
+				<li>list item</li>
+				<li>list item</li>
+				<li>list item</li>
+				<li>list item</li>
+				<li>list item</li>
+			</ul>
+
+
+			<input type="button" value="Button">
+			<br>
+			<input type="submit" value= "Submit">
+			<br>
+			<input type="text">
+			<a href="http://google.com">google</a>
+				<a href="http://yahoo.com">yahoo</a>
+	</div>
+
+<!-jquery styling--->
+	<script>
+		//$("h1").hide();
+		//$("h1#heading1").hide();
+		//$("h2.heading2").hide();
+		//$("p span").css('color','red');
+
+
+		$("ul#list li:first").css('color','red');
+		$("ul#list li:last").css('color','blue');
+		$("ul#list li:even").css('background','yellow');
+		$("ul#list li:odd").css("background","#ccc");
+		$("ul#list li:nth-child(3)").css("list-style","none");
+		$("ul#list li:nth-child(2n)").css("list-style","none");
+
+		$(':button').hide();
+		$(':submit').hide();
+		$(':text').hide();
+
+		$("*").hide();
+
+		//$("[href]").css('color','red');
+		$("a[href="http://yahoo.com"]").css('color','green');
+
+	</script>
+
+</body>
+</html>
